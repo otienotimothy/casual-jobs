@@ -306,7 +306,7 @@ nav button:active {
 
 .build-profile {
 	background-color: #3f6745;
-	margin: 2rem 0;
+	margin: 2rem 0 0;
 	text-align: center;
 }
 
@@ -367,4 +367,12 @@ nav button:active {
 
 .btn:hover {
 	transform: translateY(-3px);
+}
+
+/* Footer Section */
+footer {
+	padding: 1rem;
+	font-size: 1.2rem;
+	color: #3f6745;
+	text-align: center;
 }
