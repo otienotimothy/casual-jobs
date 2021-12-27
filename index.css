@@ -2,7 +2,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap");
 
 /* Remove Default Styling */
 * {
@@ -30,7 +30,7 @@
 	margin: 0.8rem 0;
 	font-size: 1.8rem;
 	font-weight: 600;
-	font-family: 'Oleo Script Swash Caps', cursive;
+	font-family: "Oleo Script Swash Caps", cursive;
 	letter-spacing: 0.1rem;
 	background-color: #3f6745;
 	color: #ffffff;
@@ -39,13 +39,14 @@
 .logo h2 {
 	color: #3f6745;
 	font-weight: 400;
+	margin-bottom: .4rem;
 }
 
 /* Humburger Menu */
 
 .toggler {
-	width: 2.5rem;
-	height: 2.5rem;
+	width: 2.2rem;
+	height: 2.2rem;
 	border: none;
 	position: absolute;
 	top: 15%;
@@ -56,8 +57,8 @@
 }
 
 .humburger {
-	width: 2.5rem;
-	height: 2.5rem;
+	width: 2.2rem;
+	height: 2.2rem;
 	border: none;
 	position: absolute;
 	top: 15%;
@@ -75,7 +76,7 @@
 	height: 1px;
 	background-color: white;
 	position: relative;
-	transition: all .5s ease;
+	transition: all 0.5s ease;
 }
 
 .humburger > div::before,
@@ -109,7 +110,7 @@
 
 /* Rotate when state is checked and mouse hovers over it */
 
-.toggler:checked:hover + .humburger > div{
+.toggler:checked:hover + .humburger > div {
 	transform: rotate(225deg);
 }
 
@@ -118,7 +119,7 @@
 nav {
 	display: none;
 	position: absolute;
-	background-color: #3f6745;
+	background-color: rgba(63, 103, 69, 0.7);
 	height: 0;
 	width: 100%;
 }
@@ -171,10 +172,10 @@ nav ul li a {
 
 nav ul li a:hover {
 	border-bottom: 1px solid white;
-} 
+}
 
 nav button {
-	padding: .8rem 2.5rem;
+	padding: 0.8rem 2.5rem;
 	background-color: white;
 	font-size: 1.2rem;
 	font-weight: 500;
@@ -190,4 +191,72 @@ nav button:hover {
 
 nav button:active {
 	transform: translateX(0);
+}
+
+/* Hero Section */
+.hero-section {
+	min-height: 60vh;
+	background-image: linear-gradient(
+			to right,
+			rgba(63, 103, 69, 0.7),
+			rgba(63, 103, 69, 0)
+		),
+		url("./assets//images/painter.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+
+.main-heading span {
+	display: block;
+}
+
+.main-heading h1 {
+	letter-spacing: 1px;
+	font-weight: 500;
+}
+
+.main-heading p {
+	margin-top: .5rem;
+	font-size: 1.25rem;
+}
+
+/* Search Form */
+
+.search-form {
+	margin-top: 2rem;
+}
+
+.search-form h3 {
+	font-weight: 400;
+	margin-bottom: .4rem;
+}
+
+.search-form select,
+.search-form button {
+	padding: .5rem 1.5rem;
+	border: none;
+	border-top-left-radius: 1rem;
+	border-bottom-left-radius: 1rem;
+	background-color: #3f6745;
+	color: white;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.search-form select:focus,
+.search-form button:focus {
+	outline: none;
+}
+
+.search-form button {
+	border-top-left-radius: unset;
+	border-bottom-left-radius: unset;
+	border-top-right-radius: 1rem;
+	border-bottom-right-radius: 1rem;	
 }
