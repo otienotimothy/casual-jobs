@@ -261,3 +261,43 @@ nav button:active {
 	border-top-right-radius: 1rem;
 	border-bottom-right-radius: 1rem;	
 }
+
+/* Category Section  */
+.category-section h2 {
+	text-align: center;
+	margin: 2rem 0;
+	font-weight: 400;
+	color: #3f6745;
+}
+
+.categories-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+.categories-container > div {
+	width: 60%;
+	text-align: center;
+	border: 1px solid #3f6745;
+	margin-bottom: 1rem;
+	padding: .5rem 0;
+	border-radius: 1rem;
+	box-shadow: 2px 2px 8px rgba(63, 103, 69, 0.7);
+	transition: transform .5s ease;
+}
+
+.categories-container > div:hover {
+	transform: scale(1.1)
+}
+
+.categories-container > div > img {
+	width: 65%;
+	color: white;
+}
+
+.categories-container > div > h4 > a {
+	color: #3f6745;
+	font-size: 1.2rem;
+}
