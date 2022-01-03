@@ -150,7 +150,7 @@ nav {
 nav ul {
 	width: 100%;
 	height: 50%;
-	margin: 4rem 0;
+	/* margin: 4rem 0; */
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -272,13 +272,15 @@ nav button:active {
 
 .categories-container {
 	display: flex;
-	flex-direction: column;
+	/* flex-direction: column; */
+	flex-wrap: wrap;
 	align-items: center;
+	justify-content: space-evenly;
 	width: 100%;
 }
 
 .categories-container > div {
-	width: 60%;
+	width: 35%;
 	text-align: center;
 	border: 1px solid #3f6745;
 	margin-bottom: 1rem;
@@ -375,4 +377,81 @@ footer {
 	font-size: 1.2rem;
 	color: #3f6745;
 	text-align: center;
+}
+
+/* Larger Display */
+
+@media (min-width: 760px){
+
+	.app-bar {
+		position: static;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 15vh;
+	}
+
+	/* Hide the Humburger Menu */
+	.toggler, .humburger {
+		display: none;
+	}
+
+	/* Display Logo and Page Title to the Left */
+	.logo {
+		flex-direction: row;
+		margin-left: 1.5rem;
+	}
+
+	.logo h2 {
+		margin-top: .5rem;
+		margin-left: .5rem;
+		font-size: 1.25rem;
+	}
+
+	/* Display the Navigation */
+	nav {
+		position: static;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+		width: 55%;
+		height: 100%;
+		background-color: white;
+	}
+
+	nav ul {
+		height: 100%;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 70%;
+	}
+
+	nav ul li a {
+		font-size: 1.2rem;
+		color: #3f6745;
+	}
+
+	nav button {
+		padding: 0.3rem 1.25rem;
+		background-color:#3f6745;
+		color: #ffffff;
+		border-radius: 1rem;
+	}
+
+	nav ul li a:hover {
+		border-bottom: 1px solid #3f6745;
+	}
+
+	/* Categories */
+	.categories-container > div {
+		width: 26%;
+	}
+}
+
+@media (min-width: 900px) {
+	.categories-container > div {
+		width: 23%;
+		margin-inline: .8rem;
+	}
 }
