@@ -12,6 +12,11 @@
 	font-family: "Roboto", sans-serif;
 }
 
+.container {
+	max-width: 1440px;
+	margin-inline: auto;
+}
+
 .app-bar {
 	position: relative;
 }
@@ -39,7 +44,7 @@
 .logo h2 {
 	color: #3f6745;
 	font-weight: 400;
-	margin-bottom: .4rem;
+	margin-bottom: 0.4rem;
 }
 
 /* Humburger Menu */
@@ -222,7 +227,7 @@ nav button:active {
 }
 
 .main-heading p {
-	margin-top: .5rem;
+	margin-top: 0.5rem;
 	font-size: 1.25rem;
 }
 
@@ -235,12 +240,12 @@ nav button:active {
 .search-form h3 {
 	text-align: center;
 	font-weight: 400;
-	margin-bottom: .4rem;
+	margin-bottom: 0.4rem;
 }
 
 .search-form select,
 .search-form button {
-	padding: .5rem 1.5rem;
+	padding: 0.5rem 1.5rem;
 	border: none;
 	border-top-left-radius: 1rem;
 	border-bottom-left-radius: 1rem;
@@ -259,7 +264,7 @@ nav button:active {
 	border-top-left-radius: unset;
 	border-bottom-left-radius: unset;
 	border-top-right-radius: 1rem;
-	border-bottom-right-radius: 1rem;	
+	border-bottom-right-radius: 1rem;
 }
 
 /* Category Section  */
@@ -280,18 +285,19 @@ nav button:active {
 }
 
 .categories-container > div {
-	width: 35%;
+	width: 30%;
 	text-align: center;
 	border: 1px solid #3f6745;
 	margin-bottom: 1rem;
-	padding: .5rem 0;
+	margin-inline: .6rem;
+	padding: 0.5rem 0;
 	border-radius: 1rem;
 	box-shadow: 2px 2px 8px rgba(63, 103, 69, 0.7);
-	transition: transform .5s ease;
+	transition: transform 0.5s ease;
 }
 
 .categories-container > div:hover {
-	transform: scale(1.1)
+	transform: scale(1.1);
 }
 
 .categories-container > div > img {
@@ -327,6 +333,8 @@ nav button:active {
 
 .build-profile > div > img {
 	width: 70%;
+	border-bottom-right-radius: 3.5rem;
+	border-top-left-radius: 3.5rem;
 }
 
 .build-profile-content {
@@ -346,7 +354,7 @@ nav button:active {
 	background-color: white;
 	height: 3px;
 	width: 6rem;
-	margin: .5rem auto;
+	margin: 0.5rem auto;
 }
 
 .build-profile-content p {
@@ -362,7 +370,7 @@ nav button:active {
 	color: #3f6745;
 	background-color: white;
 	border-radius: 1rem;
-	padding: .5rem 0;
+	padding: 0.5rem 0;
 	width: 8rem;
 	margin: 3rem auto 1rem;
 }
@@ -381,8 +389,7 @@ footer {
 
 /* Larger Display */
 
-@media (min-width: 760px){
-
+@media (min-width: 760px) {
 	.app-bar {
 		position: static;
 		display: flex;
@@ -392,7 +399,8 @@ footer {
 	}
 
 	/* Hide the Humburger Menu */
-	.toggler, .humburger {
+	.toggler,
+	.humburger {
 		display: none;
 	}
 
@@ -403,8 +411,8 @@ footer {
 	}
 
 	.logo h2 {
-		margin-top: .5rem;
-		margin-left: .5rem;
+		margin-top: 0.5rem;
+		margin-left: 0.5rem;
 		font-size: 1.25rem;
 	}
 
@@ -434,7 +442,7 @@ footer {
 
 	nav button {
 		padding: 0.3rem 1.25rem;
-		background-color:#3f6745;
+		background-color: #3f6745;
 		color: #ffffff;
 		border-radius: 1rem;
 	}
@@ -445,13 +453,58 @@ footer {
 
 	/* Categories */
 	.categories-container > div {
-		width: 26%;
+		width: 23%;
+		margin-inline: .6rem;
 	}
 }
 
 @media (min-width: 900px) {
+	.logo h2 {
+		font-size: 1.6rem;
+	}
+
+	nav ul {
+		width: 60%;
+		justify-content: space-evenly;
+	}
+
+	nav ul li a {
+		font-size: 1.4rem;
+	}
+
+	nav button {
+		padding: 0.6rem 2.5rem;
+		font-size: 1.4rem;
+		border-radius: 1.6rem;
+	}
+
+	.hero-section {
+		align-items: flex-start;
+		padding-left: 10rem;
+	}
+
+	.main-heading h1 {
+		font-size: 3rem;
+	}
+
 	.categories-container > div {
-		width: 23%;
-		margin-inline: .8rem;
+		width: 12%;
+	}
+
+	.build-profile > div {
+		flex-direction: row;
+		padding-bottom: 1.5rem;
+	}
+
+	.build-profile > div > img {
+		width: 35%;
+		margin-inline: auto;
+	}
+
+	.build-profile-content {
+		width: 40%;
+		height: 100%;
+		padding: 0 1.5rem;
+		margin: 0 auto;
 	}
 }
